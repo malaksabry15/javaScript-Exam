@@ -67,7 +67,9 @@ async function getdata(){
 getdata()
 function display(arr){
 let box=``
-for(let i=0;i<20;i++){
+for(let i=0;i<arr.length;i++){
+    if(i==20)
+        break;
     box+=`<div class="col-md-3 text-black">
     <div onclick=" getDetails('${arr[i].idMeal}')" class="box position-relative overflow-hidden ">
             <img src="${arr[i].strMealThumb}" alt="" class="w-100  rounded-2">
